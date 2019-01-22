@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
-    'balance',
+    'balance.apps.BalanceConfig',
 ]
 
 MIDDLEWARE = [
