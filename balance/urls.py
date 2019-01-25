@@ -4,5 +4,5 @@ from django.views.generic.base import TemplateView
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='home'),
+    path('', views.update_bal, name='home'),
 ]
