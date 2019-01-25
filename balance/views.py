@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
 from django.http import HttpResponse
-from .models import Balance
+from .models import Balance, Money_item
 from django.template import loader
 from .forms import Update_Balance
 
@@ -26,6 +26,9 @@ def update_bal(request):
 
 
 def log_creation(request):
+    log_list = Money_item.objects.all()
     template = loader.get_template('log_page.html')
-    context = {}
+    context = {
+        'log_list': log_list,
+    }
     return HttpResponse(template.render(context, request))
