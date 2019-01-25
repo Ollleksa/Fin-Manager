@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Log of work{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <p><a href="{% url 'home' %}">Main</a></p>
+    Hi {{ user.username }}!
+    Here you can see your log.
+    <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+    <p>You are not logged in. For using Finance Manager please log in.</p>
+    <a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock %}

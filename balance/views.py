@@ -23,3 +23,9 @@ def update_bal(request):
         'form': form
     }
     return HttpResponse(template.render(context, request))
+
+
+def log_creation(request):
+    template = loader.get_template('log_page.html')
+    context = {}
+    return HttpResponse(template.render(context, request))

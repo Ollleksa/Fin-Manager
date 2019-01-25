@@ -4,6 +4,7 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+    <p><a href="{% url 'log' %}">Logs of work</a></p>
     Hi {{ user.username }}!
     Your money balance is: {{ money_list }}
     <h2> In last month your balance changed by:</h2>
